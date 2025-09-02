@@ -28,7 +28,8 @@ func split(sum int) (x, y int) { // named return values
 // can take variable number of arguments
 func variadic(nums ...int) int {
 	total := 0
-	for _,num:= range nums{
+	for _,num:= range nums{ // range returns both index and value
+		                     // we can use blank identifier _ to ignore one of them
 		total += num
 	}
 	return total
