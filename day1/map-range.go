@@ -66,6 +66,4 @@ func main(){
 	for i,v:= range "ABCo"{ // iterating over string
 		fmt.Println(i,v) // prints index and rune (unicode code point) value
 	}
-
-
 }
