@@ -6,6 +6,8 @@ import(
 )
 
 func main(){
+
+	//map
 	mp := make(map[string]int)
 	mp["k1"] = 7
 	mp["k2"] = 13
@@ -43,5 +45,27 @@ func main(){
      if maps.Equal(n, n2) { // comparing two maps
 		 fmt.Println("n and n2 are equal")
 	 }
+
+    // range
+
+	num := []int{2,3,4}
+	sum:=0
+	for _, n:= range num{
+		sum += n
+	}
+	fmt.Println("sum:", sum)
+
+	mp2:= map[string]int{"k1":1, "k2":2}
+	for k,v:= range mp2{
+		fmt.Println(k,v)
+	}
+	for k:= range mp2{ // iterating over keys only
+		fmt.Println("key:", k)
+	}
+
+	for i,v:= range "ABCo"{ // iterating over string
+		fmt.Println(i,v) // prints index and rune (unicode code point) value
+	}
+
 
 }
